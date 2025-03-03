@@ -10,13 +10,13 @@ import * as Level from './level';
     await app.init({ background: '666666', resizeTo: window });
     document.body.appendChild(app.canvas);
 
-    let scenes: Scene[] = [];
+    const scenes: Scene[] = [];
 
     scenes.push(new Level.Cards(app, "Cards"));
     scenes.push(new Level.Words(app, "Words"));
     scenes.push(new Level.Flames(app, "Flames"));
 
-    let menu = new Menu(app, scenes);
+    const menu = new Menu(app, scenes);
 
     scenes.forEach(scene => {
         scene.parentScene = menu;

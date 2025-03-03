@@ -28,7 +28,7 @@ export class Cards extends Scene {
         this.rightPosition = app.screen.width * 0.75;
 
         for (let i = 0; i < 144; i++) {
-            let card = new Sprite(texture);
+            const card = new Sprite(texture);
             this.leftStack.push(card);
             this.container.addChild(card);
             card.anchor.set(0.5);
@@ -41,10 +41,10 @@ export class Cards extends Scene {
     update = (time: Ticker) => {
         this.elapsedTime += time.deltaMS;
         if (this.elapsedTime >= this.animationInterval && this.leftStack.length > 0) {
-            let card = this.leftStack.pop();
+            const card = this.leftStack.pop();
             if (card) {
                 card.zIndex = this.rightStack.length;
-                let destination = new Point(Math.abs(this.rightPosition), this.app.screen.height / 2 - this.rightStack.length * this.spacing);
+                const destination = new Point(Math.abs(this.rightPosition), this.app.screen.height / 2 - this.rightStack.length * this.spacing);
                 gsap.to(card, {
                     x: destination.x,
                     y: destination.y,

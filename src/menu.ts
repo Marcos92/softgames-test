@@ -14,10 +14,10 @@ export class Menu extends Scene {
 
     createButtons = (app: Application) => {
         this.scenes.forEach((scene, index) => {
-            let button = new Button(200, 75, scene.name);
+            const button = new Button(200, 75, scene.name);
             this.container.addChild(button);
-            let spacing = 25;
-            let y = app.screen.height / 2 - button.getBounds().height / 2 - button.getBounds().height * ((this.scenes.length) / 2) - spacing * ((this.scenes.length - 1) / 2);
+            const spacing = 25;
+            const y = app.screen.height / 2 - button.getBounds().height / 2 - button.getBounds().height * ((this.scenes.length) / 2) - spacing * ((this.scenes.length - 1) / 2);
             button.position.x = app.screen.width / 2 - button.getBounds().width / 2;
             button.position.y = y + index * (button.getBounds().height + spacing);
             button.onClick(() => {
