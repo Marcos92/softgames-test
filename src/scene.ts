@@ -6,7 +6,7 @@ export class Scene {
     app: Application;
     container: Container;
 
-    public name: string;
+    name: string;
 
     closeButton: Button;
 
