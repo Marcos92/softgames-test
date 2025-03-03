@@ -7,7 +7,7 @@ import * as Level from './level';
 (async () => {
 
     const app = new Application();
-    await app.init({ background: '666666', resizeTo: window });
+    await app.init({ background: '6495ED', resizeTo: window });
     document.body.appendChild(app.canvas);
 
     let menu = new Menu(app, createScenes(app));
