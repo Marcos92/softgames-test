@@ -39,7 +39,7 @@ export class Button extends Container {
         this.addChild(label);
     }
 
-    public onClick(action: () => void) {
+    onClick(action: () => void) {
         this.button.on("pointerdown", action);
     }
 
