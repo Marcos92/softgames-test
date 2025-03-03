@@ -22,5 +22,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "@armathai/pixi-tween": "^2.0.2",
+    "gsap": "^3.12.7",
+    "pixi-tween": "^0.2.0"
+  }
 }

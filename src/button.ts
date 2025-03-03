@@ -1,4 +1,4 @@
-import { Application, Container, FederatedPointerEvent, Graphics } from "pixi.js";
+import { Container, Graphics } from "pixi.js";
 
 export class Button extends Container {
 
