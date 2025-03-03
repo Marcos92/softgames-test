@@ -17,8 +17,8 @@ export class Cards extends Scene {
     animationInterval = 1000;
     animationDuration = 2000;
 
-    constructor(app: Application) {
-        super(app);
+    constructor(app: Application, name: string) {
+        super(app, name);
     }
 
     override async load(app: Application): Promise<void> {
